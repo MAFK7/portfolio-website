@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const LINKS = [
   { href: "/#home", label: "Home" },
@@ -11,11 +12,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg/85 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link
-          href="/#home"
-          className="font-mono text-sm font-bold tracking-widest text-primary"
-        >
-          MAFK
+        <Link href="/#home" className="flex items-center">
+          <Image
+            src="/mafk.png"
+            alt="MAFK"
+            width={110}
+            height={40}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 font-mono text-[13px] text-text-muted sm:flex">
